@@ -1,0 +1,122 @@
+.navbar {
+  background-color: #010d1a;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between; /* Ensure the space is properly distributed */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  height: 60px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar-logo {
+  font-size: 2.8em;
+  font-weight: bold;
+  color: #25eb4d;
+}
+
+/* Adjust the alignment of the links */
+.navbar-links {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  margin: 0 auto; /* Center the links in the navbar */
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+/* Navbar link items */
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #25eb4d;
+  font-size: 1em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #00b312;
+  text-shadow: 0 2px 5px rgba(0, 255, 0, 0.4); /* Add a glow effect */
+  border-bottom: 2px solid #00b312; /* Underline effect on hover */
+}
+/* Hide the navbar-toggle button initially (for desktop view) */
+.navbar-toggle {
+  display: none;
+}
+
+/* Hamburger Menu Icon Styling */
+.hamburger-icon {
+  font-size: 2em;
+  color: #25eb4d;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Mobile View - Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    left: 0;
+    width: 100%;
+  }
+
+  /* Show hamburger icon in mobile view */
+  .navbar-toggle {
+    display: block;
+    border: none;
+    background: none;
+    font-size: 2em;
+    color: #25eb4d;
+    cursor: pointer;
+  }
+
+  /* Hide navbar links by default in mobile view */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show navbar links when menu is open */
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    display: block;
+  }
+}
+
+/* Toggle button styling */
+.toggle-button {
+  margin-right: 20px;
+  padding: 0.5em 1.5em;
+  background-color: #25eb4d;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #00b312;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3); /* Hover effect with glow */
+}

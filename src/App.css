@@ -1,0 +1,279 @@
+/* General body styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #010d1a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Sidebar styling */
+.sidebar {
+  background-color: #000a11;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+}
+
+.logo {
+  margin-bottom: 1.5em;
+}
+
+.dcx-name {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+.profile-info {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.profile-info p {
+  margin: 2.2em 0;
+}
+
+.profile-info a {
+  text-decoration: none;
+  color: #25eb4d;
+  font-weight: bold;
+}
+
+.profile-info a:hover {
+  color: #00b312;
+}
+
+/* Main content styling */
+main {
+  margin-left: 250px;
+  margin-top: 60px;
+  padding: 2em;
+  box-sizing: border-box;
+}
+.about-image {
+  float: left; /* Float the image to the left */
+  width: 200px; /* Set a suitable width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 1.5em 1.5em 0; /* Add margin around the image to create spacing */
+  border-radius: 8px; /* Optional: Add rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+
+
+/* Projects list */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: flex-start;
+}
+
+/* Project card styling */
+.project-card {
+  flex: 1 1 calc(33.33% - 1em);
+  padding: 1.5em;
+  border-radius: 8px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 1.5em;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: inherit;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.project-card p {
+  margin-bottom: 1em;
+}
+
+.project-card .status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+}
+
+.status.In-progress {
+  background-color: #FFF4E0;
+  color: #FF9800;
+  border-color: #FF9800;
+}
+
+.status.Completed {
+  background-color: #E8F5E9;
+  color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.status.Aborted {
+  background-color: #FFEBEE;
+  color: #F44336;
+  border-color: #F44336;
+}
+
+.status.On-hold {
+  background-color: #E3F2FD;
+  color: #2196F3;
+  border-color: #2196F3;
+}
+
+.status.Testing {
+  background-color: #FFFDE7;
+  color: #FFEB3B;
+  border-color: #FFEB3B;
+}
+
+.status.Planned {
+  background-color: #F3E5F5;
+  color: #9C27B0;
+  border-color: #9C27B0;
+}
+
+.hero-section {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  left: -32px; /* Offset the left margin caused by the sidebar */
+  height: 100vh; /* Full viewport height */
+  background: url('hero-background.webp') no-repeat center center/cover;
+  background-attachment: fixed; /* Parallax effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+.hero-section h1 {
+  font-size: 4em;
+  position: relative;
+  z-index: 1; /* Keep text above the background */
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay for better text visibility */
+  z-index: 0;
+}
+
+/* Ensure content inside is positioned above the overlay */
+.hero-section h1 {
+  font-size: 4em; /* Increase font size */
+  z-index: 1; /* Ensure text stays on top */
+  position: relative;
+}
+
+/* Unique Section Header styling with gradient (logo colors), no shadow */
+h2.section-header {
+  font-size: 2.8em; /* Large font size */
+  font-weight: bold; /* Make it bold */
+  text-transform: uppercase; /* All uppercase */
+  background: linear-gradient(90deg, #00ff77, #00b3ff); /* Updated to logo-like gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Gradient text */
+  position: relative;
+  margin-bottom: 1em;
+  display: inline-block;
+  letter-spacing: 1px;
+  transition: transform 0.3s, text-shadow 0.3s; /* Smooth transition */
+}
+
+/* Text shadow effect on hover */
+h2.section-header:hover {
+  text-shadow: 0 4px 8px rgba(0, 255, 255, 0.5); /* Soft shadow glow */
+  transform: scale(1.05); /* Slight scale up */
+}
+
+
+h2.section-header:hover::after {
+  width: 100px; /* Animate to full width on hover */
+}
+
+/* Remove any shadow-related styles */
+h2.section-header.with-shadow {
+  box-shadow: none; /* No shadow under the header */
+  padding-bottom: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+h2.section-header span.highlight {
+  color: #ff7f50;
+  background: none;
+}
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #000b01;
+  margin-top: 2em;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  box-sizing: border-box;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .project-card {
+    flex: 1 1 100%;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 1em;
+  }
+
+  .navbar {
+    left: 0;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .footer {
+    margin-left: 0;
+    width: 100%;
+  }
+}
